@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Github Favorites</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="./js/main.js" type="module" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>GitUsers</h1>
+            <div class="search">
+                <label class="sr-only" for="">Digite o Github username que quer favoritar</label>
+                <input id="input-search" type="text" placeholder="Digite o Github username que quer favoritar">
+                <button>&star; Favoritar</button>
+            </div>
+        </header>
+        <table id="users-table">
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Repositórios</th>
+                    <th>Seguidores</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody class="tbody-users"></tbody>
+        </table>
+        <table id="no-users-table" class="table-no-users">
+           
+            <tbody class="tbody-no-users">
+                <tr>
+                    <td class="tbody-empty">
+                        <img src="./images/start-user.svg" alt="">
+                        <p>Nenhum usuário ainda</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

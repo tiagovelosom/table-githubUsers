@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-family-others: 'roboto', sans-serif;
+    --font-family-tittle: 'roboto mono', sans-serif;
+    --color-button-search: #065E7C;
+    --color-button-search-hover: #ffffff;
+    --color-header: #ffffff;
+    --text-color-table: #E1E1E6;
+}
+
+body {
+    background-color: black;
+}
+
+.table-no-users {
+    display: none;
+}
+
+.show {
+    display: table;
+}
+
+#app {
+    padding: 11.5rem 16rem;
+    max-width: 112rem;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8.7rem;
+}
+
+header * {
+    color: var(--color-header);
+}
+
+header h1 {
+    font-family: var(--font-family-tittle);
+    font-size: 3.3rem;
+    font-weight: bold;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.search input {
+    font-family: var(--font-family-others);
+    width: 46.2rem;
+    padding: 1.6rem;
+    background-color: #06181C;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+}
+
+.search input::placeholder {
+    font-size: 1.6rem;
+    color: #7C7C8A;
+}
+
+.search button {
+    background-color: var(--color-button-search);
+    border: none;
+    border-radius: .5rem;
+    width: 17rem;
+    padding: 1.2rem 3.2rem;
+
+    font-family: var(--font-family-others);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .5s;
+}
+
+.search button:hover {
+    background-color: var(--color-button-search-hover);
+    color: var(--color-button-search);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+table *  {
+    font-family: var(--font-family-others);
+    font-size: 2rem;
+    color: var(--text-color-table);
+}
+
+
+table th {
+    background: #092D38;
+    
+    text-align: left;
+    font-weight: bold;
+    padding: 1.6rem 9.2rem 1.6rem 4rem;
+}
+
+
+table th:first-child {
+    border-top-left-radius: 1.2rem;
+
+}
+
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+.tbody-users {
+    display: block;
+    max-height: 62.4rem;
+    overflow-y: scroll;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    
+}
+
+.tbody-users::-webkit-scrollbar {
+    width: .6rem;
+}
+
+
+.tbody-users::-webkit-scrollbar-thumb {
+    background-color: #4A808C;
+    border-radius: 1rem;
+    min-height: 12.2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    
+}
+
+table tr:nth-child(odd) {
+    background: #06161b7e;
+}
+
+table tr:nth-child(even) {
+    background: #06181C;
+}
+
+table td {
+    padding: 2.4rem 5.6rem 2.4rem 4rem;
+    text-align: left;
+}
+
+/* table tr:last-child {
+    border-bottom-left-radius: 1.2rem;
+} */
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+td.user img {
+    width: 5.6rem;
+    height: 5.6rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+td.user a span {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+td .remove {
+    background: none;
+    border: none;
+    color: #F75A68;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    cursor: pointer;
+}
+
+/* estilização da tabela sem usuários */
+.no-users {
+    height: 62.4rem;
+}
+
+.tbody-no-users {
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+}
+
+.tbody-empty {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+
+    padding: 21rem 23rem 29rem 19rem;
+}
+
+.tbody-empty img {
+    width: 13.2rem;
+    height: 12.5rem;
+}
+
+.tbody-empty p {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #4E5455;
+}
+
